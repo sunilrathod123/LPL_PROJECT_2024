@@ -10,4 +10,5 @@ LPL_PROJECT:
       type: snowflake
       user: sunilrathod
       warehouse: WH_CP
+      
   target: dev
