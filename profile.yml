@@ -1,0 +1,13 @@
+LPL_PROJECT:
+  outputs:
+    dev:
+      account: yq27823.ap-southeast-1
+      database: DEMO
+      password: Sunil@1995
+      role: ACCOUNTADMIN
+      schema: DATA_SCHEMA
+      threads: 1
+      type: snowflake
+      user: sunilrathod
+      warehouse: WH_CP
+  target: dev
