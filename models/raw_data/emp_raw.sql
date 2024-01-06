@@ -2,7 +2,7 @@
 
 with source as (
 
-select * from DEMO.PUBLIC.EMP
+select * from "DEMO"."PUBLIC"."EMP"
 ),
 renamed as (
 
@@ -16,10 +16,7 @@ select
      gender as sex
 
 from 
-
 source
-
-
-) 
+)
 
 select * from renamed

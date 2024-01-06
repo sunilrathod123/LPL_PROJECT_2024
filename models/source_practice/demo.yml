@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  -  name: source_practice
+     database: DEMO
+     schema:  PUBLIC
+     tables:  
+       - name: EMP    
+
+#source freshness
+# loaded_at_field: date
+#freshness:
+#  warn_after: {count: 1, period: hour}    
+#  error_after: {count: 24, period: hour}  
+
+#use command: dbt source freshness

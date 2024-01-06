@@ -1,3 +1,4 @@
 {
-    "dbt.enableNewQueryPanel": true
+    "dbt.enableNewQueryPanel": true,
+    "dbt.enableNewLineagePanel": true
 }

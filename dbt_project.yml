@@ -1,8 +1,7 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'LPL_PROJECT'
+name: 'lpl_project'
 version: '1.0.0'
 config-version: 2
 
@@ -19,6 +18,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -32,18 +32,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 
 
-models:
-  LPL_PROJECT:
+models:      
+  lpl_project:
     # Config indicated by + and applies to all files under models/example/
     raw_data:
        
-      +materialized: view
+      +materialized: view     # we can chanage the materialized by specifying in model file
 
     cleansed_data:
 
-      +materialized: view
+      +materialized: view    # we can chanage the materialized by specifying in model file
 
     publish_data:
-      +materialized: table
+      +materialized: table    # we can chanage the materialized by specifying in model file
 
+    source_practice:
+      +materialized: view
 

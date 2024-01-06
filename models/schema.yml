@@ -1,0 +1,19 @@
+version: 2
+#for generic test we create .yml file and run: dbt run
+#for generic test below test working fine
+
+models: 
+  - name: manager_raw
+    columns:
+      - name: manager_id
+        tests:
+        - unique
+        - not_null 
+
+  - name: emp_raw
+    columns:
+      - name: CITY
+        tests: 
+         - accepted_values:
+             values: ['mumbai','pune','solapur','nashik']
+        

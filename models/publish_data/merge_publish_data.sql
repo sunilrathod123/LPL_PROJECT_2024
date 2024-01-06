@@ -1,3 +1,12 @@
+-- we can chanage here materialized once we define here it will override the dbt_projet.yml configuration
+
+ {{
+  config(
+    materialized = 'table'   
+    )
+}}
+
+
 with source as(
 
 select 
@@ -5,7 +14,7 @@ e.emp_name,
 e.emp_id,
 e.emp_salary,
 m.manager_id
-
+--                    
 from 
 {{ref("emp_cleansed")}} e
 
