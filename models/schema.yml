@@ -16,4 +16,9 @@ models:
         tests: 
          - accepted_values:
              values: ['mumbai','pune','solapur','nashik']
+             
+#custom macro generic test created in macros folder
+      - name: emp_id
+        tests:
+         - negative_value         
         
