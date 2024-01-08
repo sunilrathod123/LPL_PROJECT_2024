@@ -1,0 +1,8 @@
+#version: 2 
+
+#seeds:
+#  -  name: csv_file_name
+#      full_refresh: true
+
+#  -  name: csv_file_name
+#       full_refresh: true     

@@ -1,16 +1,21 @@
 version: 2
 #for generic test we create .yml file and run: dbt run
 #for generic test below test working fine
+#we can mention the documention configuration also
+#
 
 models: 
-  - name: manager_raw
+  - name: manager_raw     #model_name
+    decription: manager raw table 
     columns:
       - name: manager_id
+        description: Primary key
         tests:
         - unique
         - not_null 
 
   - name: emp_raw
+    decription: emp_raw table 
     columns:
       - name: CITY
         tests: 

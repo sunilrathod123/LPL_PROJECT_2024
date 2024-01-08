@@ -1,5 +1,7 @@
 {% snapshot snapshot_name %}
 
+#scd2 in warehouse 
+
 {{
    config(
        target_database='DEMO',

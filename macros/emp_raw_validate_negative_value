@@ -1,11 +1,26 @@
-{% test negative_value(model, column_name) %}
 
-select 
-  *
-from 
-   {{model}}
+{% macro negative_value(model, column_name) %}
+with filtered_data as (
+    select 
+      *
+    from 
+       {{ ref(model) }}
+    where 
+        {{ column_name }} < 1
+)
 
-where 
-    {{ column_name}}<1
+select
+    *
+from
+    filtered_data
+{% endmacro %}
 
-{% endtest %}  
+
+-- macros/total_revenue.sql
+
+{% macro total_revenue(model, revenue_column) %}
+    select
+        sum({{ revenue_column }}) as total_revenue
+    from
+        {{ ref(model) }}
+{% endmacro %}

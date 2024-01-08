@@ -4,8 +4,10 @@ sources:
   -  name: source_practice
      database: DEMO
      schema:  PUBLIC
-     tables:  
-       - name: EMP    
+     tables: 
+#very imp if our gov team chnaged the table name it very difficult to chnage the table in every where,so we use name and idetifier      
+       - name: employee 
+         identifier: EMP   
 
 #source freshness
 # loaded_at_field: date

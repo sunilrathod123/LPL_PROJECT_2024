@@ -34,6 +34,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:      
   lpl_project:
+ #by default the data store in transient table
+ #  +transient=false 
     # Config indicated by + and applies to all files under models/example/
     raw_data:
        
@@ -47,5 +49,5 @@ models:
       +materialized: table    # we can chanage the materialized by specifying in model file
 
     source_practice:
-      +materialized: view
+     +materialized: view
 
