@@ -40,6 +40,8 @@ models:
     raw_data:
        
       +materialized: view     # we can chanage the materialized by specifying in model file
+      #in snowflake it wil concat the default schema, to remove this use macroed,macros in macro folder.generate_schema.sq file
+      +schema: raw_staging    #it will override the target schema mentioned in profile.yml
 
     cleansed_data:
 
